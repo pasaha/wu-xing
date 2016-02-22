@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: manifest.xml 400 2010-11-08 03:54:47Z eddieajau $ -->
+<install type="component" version="1.5.19" method="upgrade">
+    <name>Redirect</name>
+    <version>1.0.2</version>
+    <creationDate>2010-11-08</creationDate>
+    <author>Andrew Eddie</author>
+    <authorEmail>info@newlifeinit.com</authorEmail>
+    <authorUrl>http://www.theartofjoomla.com</authorUrl>
+    <copyright>2005 - 2010 New Life in IT Pty Ltd. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <description>COM_REDIRECT_DESC</description>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install/installsql.mysql.utf8.php</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">install/uninstallsql.mysql.utf8.php</file>
+		</sql>
+	</uninstall>
+
+	<administration>
+        <menu img="components/com_redirect/media/img/redirect_16x16.png" link="option=com_redirect">Redirect</menu>
+
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_redirect.ini</language>
+		</languages>
+
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>install</folder>
+			<folder>language</folder>
+			<folder>libraries</folder>
+			<folder>media</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+
+			<file>controller.php</file>
+			<file>index.html</file>
+			<file>redirect.php</file>
+			<file>version.php</file>
+		</files>
+	</administration>
+
+	<installfile>install/install.php</installfile>
+	<uninstallfile>install/uninstall.php</uninstallfile>
+
+	<plugins>
+		<plugin plugin="redirect" group="system" title="System - Redirect" state="0">
+			<files folder="plg_system_redirect">
+				<filename plugin="redirect">redirect.php</filename>
+				<filename>redirect.xml</filename>
+			</files>
+
+			<languages folder="plg_system_redirect/language">
+				<language tag="en-GB">en-GB/en-GB.plg_system_redirect.ini</language>
+			</languages>
+		</plugin>
+	</plugins>
+</install>

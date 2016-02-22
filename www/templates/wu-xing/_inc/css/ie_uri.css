@@ -1,0 +1,28 @@
+/*
+Content-Type: multipart/related; boundary="_"
+
+--_
+Content-Location:p
+Content-Type: image/gif
+Content-Transfer-Encoding:base64
+
+R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+--_
+Content-Location:imageDataClassName
+Content-Type: image/gif
+Content-Transfer-Encoding:base64
+
+imageData
+
+--_--
+*/
+
+.p{
+background-image: url(mhtml:http://siteName.dev.webway.ru/_inc/css/ie_uri.css!p)
+}
+
+.className{
+background-image: url(mhtml:http:///_inc/css/ie_uri.css!imageDataClassName)
+}
+

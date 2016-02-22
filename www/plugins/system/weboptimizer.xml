@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+	<name>System - Web Optimizer</name>
+	<author>Nikolay Matsievsky</author>
+	<creationDate>September 2009</creationDate>
+	<copyright>Copyright (C) 2009 Nikolay Matsievsky. All rights reserved.</copyright>
+	<license>GNU GPLv3 License</license>
+	<authorEmail>support@webo.name</authorEmail>
+	<authorUrl>http://www.web-optimizer.us/</authorUrl>
+<version>0.6.7</version>
+	<description><![CDATA[<h2>Attention! For correct work you need to make sure that</h2><ol>
+<li>the document root writable for your web server, or place there writable <code>.htaccess</code> file, or make this file writable,</li>
+<li>Joomla! cache folder (/cache) writable for your web server.</li>
+<li>Web Optimizer is the located BEFORE "System - Cache" among enabled plugins.</li>
+<li>GZIP is disabled in Joomla! system configuration.</li>
+</ol>
+<p><a href="http://www.web-optimizer.us/">Buy Now Web Optimizer</a> | <a href="http://www.web-optimizer.us/web-optimizer/comparison.html">Version Comparison</a></p>
+<h2>Web Optimizer for Joomla! 1.5</h2>
+<p>This plugin is aimed to automate all clientside improvements for website that should significantly increase load speed of its pages. Main Features:</p>
+<h3>Simple 1-click installation</h3>
+<ul><li>overall website acceleration in 1 minute;</li>
+<li>express install requires no advanced knowledge;</li>
+<li>default options guarantee optimal performance;</li>
+<li>monitor for traffic / visitor's time savings;</li>
+<li>average speed up is 300-500% (up to 1000% or 98 by YSlow).</li></ul>
+<h3>Powerful and fast algorithm</h3>
+<ul><li>caching for minimized files;</li>
+<li>caching for gzipped files;</li>
+<li>fast HTML code parsing (1-5 ms in full version);</li>
+<li>server side load decrease (by number of requests).</li></ul>
+<h3>CSS / JS files merging</h3>
+<ul><li>dozens of JavaScript files are combined into 1;</li>
+<li>dozens of CSS files are combined into 1;</li>
+<li>different cache files for different browsers;</li>
+<li>conditional comments parsing;</li>
+<li>libraries can be excluded;</li>
+<li>inline code and external scripts are included by default;</li>
+<li>all code is minified and compressed.</li></ul>
+<h3>Unobtrusive JS and dynamic loading</h3>
+<ul><li>by default scripts are moved to <code>&lt;/head&gt;</code>;</li>
+<li>scripts can be moved to <code>&lt;/body&gt;</code>;</li>
+<li>scripts can be loaded on <code>onDOMready</code>;</li>
+<li>counters can be moved to <code>&lt;/body&gt;</code>;</li>
+<li>ads can be moved to <code>&lt;/body&gt;</code>;</li>
+<li>no blocking scripts!</li></ul>
+<h3>HTML minify / strip comments</h3>
+<ul><li>simple and fast regexp for HTML code;</li>
+<li>comments can be striped;</li>
+<li>one-string mode for HTML code.</li></ul>
+<h3>Earlier flush of content (first 1-2 Kb)</h3>
+<ul><li>can help for CPU intensive websites.</li></ul>
+<h3>CSS Tidy / simple regexp for CSS</h3>
+<ul><li>CSS Tidy 1.4 to minify CSS;</li>
+<li>if no CSS Sprites and data:URI simple regexp is used;</li>
+<li>minimization up to 50%.</li></ul>
+<h3>JSMin / Packer / YUI Compressor for JavaScript</h3>
+<ul><li>YUI Compressor if java is installed;</li>
+<li>JSMin by default (with conditional compilation);</li>
+<li>Packer for non-gzip systems;</li>
+<li>minimization up to 50%.</li></ul>
+<h3>GZIP for HTML / CSS / JS / ICO files</h3>
+<ul><li>Via <code>.htaccess</code> if it is possible.</li>
+<li>Via PHP for HTML / CSS / JS (<code>ob_gzhandler</code>).</li>
+<li>Static gzip to prevent CPU wasting.</li>
+<li>Additional check for gzip possibility via cookie.</li>
+<li>Gzip / x-gzip / deflate / x-deflate supported.</li>
+<li>All types of font files are supported.</li>
+<li>Advanced support for old and tricky browsers.</li>
+<li>Minify rate up to 88%.</li></ul>
+<h3>Optimized .htaccess for Apache</h3>
+<ul><li>mod_gzip</li>
+<li>mod_deflate (+ mod_filter)</li>
+<li>mod_mime;</li>
+<li>mod_rewrite;</li>
+<li>mod_headers;</li>
+<li>mod_expires.</li></ul>
+<h3>Client side caching for CSS / JavaScript / HTML files</h3>
+<ul><li>10 years for CSS / JavaScript / fonts / images.</li>
+<li>GET parameter / new filename to clear cache.</li>
+<li>Full proxy caching support.</li>
+<li>Optional HTML caching.</li>
+<li>Customizable time for HTML.</li>
+<li>Conditional caching (ETag).</li>
+<li>Docs / video / other files via <code>.htaccess</code>.</li></ul>
+<h3>Server side caching for minified CSS / JS / HTML files</h3>
+<ul><li>static gzip;</li>
+<li>static combine & minify;</li>
+<li>prepared HTML file.</li></ul>
+<h3>CSS Sprites (background images merging)</h3>
+<ul><li>up to 3 images from 100+;</li>
+<li>optimized via smush.it;</li>
+<li>no initial Sprites required.</li></ul>
+<h3>data:URI (+ IE7- hacks)</h3>
+<ul><li>data:URI up to 24 Kb in size;</li>
+<li>mhtml up to 50 Kb in size;</li>
+<li>.cur, .htc, .eot, .ttf, .otf, .svg files excluded;</li>
+<li>mhtml for IE6 and IE7;</li>
+<li>optional CSS files separation;</li>
+<li>optional resource file load on <code>DOMready</code> event;</li></ul>
+<h3>Multiple hosts for static assets</h3>
+<ul><li>HTML images + CSS images;</li>
+<li>15+ default hosts;</li>
+<li>optional auto-check for availability;</li>
+<li>need only DNS records and aliases in server configuration.</li></ul>
+<h3>CSS Images optimization (via smush.it)</h3>
+<ul><li>PNG can be reduced by 30%;</li>
+<li>GIF can be reduced by 60%;</li>
+<li>JPEG can be reduced by 20%.</li></ul>
+<h3>PHP4/5 &mdash; Apache module or CGI</h3>
+<ul><li>tested on Denwer;</li>
+<li>tested on VPS;</li>
+<li>tested on shared hosting;</li>
+<li>tested on collocation;</li>
+<li>PHP4 backward compatibility.</li></ul>
+<h3>Auto-update</h3>
+<ul><li>additional security;</li>
+<li>no need to download &amp; install;</li>
+<li>all options are saved.</li></ul>]]></description>
+	<files>
+		<filename plugin="weboptimizer">weboptimizer.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/controller/admin.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/controller/compressor.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/images/web.optimizer.logo.small.png</filename>
+		<filename plugin="weboptimizer">web-optimizer/images/web.optimizer.stamp.png</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/js/wo.cookie.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/js/yass.loader.js</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/class.csstidy.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/class.csstidy_ctype.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/class.csstidy_optimise.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/class.csstidy_print.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/class.csstidy4.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/class.yuicompressor4.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/class.yuicompressor.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/css.sprites.optimize.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/css.sprites.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/css.template.tpl</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/data.inc.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/jsmin4.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/jsmin5.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/packer4.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/packer5.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/view.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/php/wo.static.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/libs/yuicompressor/yuicompressor.jar</filename>
+		<filename plugin="weboptimizer">web-optimizer/config.webo.php</filename>
+		<filename plugin="weboptimizer">web-optimizer/LICENSE.ru.txt</filename>
+		<filename plugin="weboptimizer">web-optimizer/LICENSE.txt</filename>
+	</files>
+	<languages>
+		<language tag="de-DE">language/de-DE.plg_system_weboptimizer.ini</language>
+		<language tag="en-GB">language/en-GB.plg_system_weboptimizer.ini</language>
+		<language tag="es-ES">language/es-ES.plg_system_weboptimizer.ini</language>
+		<language tag="ru-RU">language/ru-RU.plg_system_weboptimizer.ini</language>
+		<language tag="uk-UA">language/uk-UA.plg_system_weboptimizer.ini</language>
+	</languages>
+	<params>
+		<param type="spacer" default="WEBO GENERAL IMAGE"/>
+		<param type="spacer" default="WEBO GENERAL BUYNOW"/>
+		<param name="license" type="text" default="" label="WEBO LOGIN LICENSE" description="" size="30"/>
+		<param type="spacer" default="WEBO SPLASH2 MINIFY"/>
+		<param type="spacer" default="WEBO SPLASH2 MINIFY INFO"/>
+		<param name="minify_javascript" type="radio" default="1" label="WEBO MINIFY JAVASCRIPT" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_javascript_with" type="radio" default="1" label="WEBO MINIFY WITH" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_with" type="radio" default="with_jsmin" label="WEBO MINIFY WITH" description=""><option value="with_jsmin">WEBO MINIFY WITH JSMIN</option><option value="with_packer">WEBO MINIFY WITH PACKER</option><option value="with_yui">WEBO MINIFY WITH YUI</option></param>
+		<param name="minify_javascript_body" type="radio" default="0" label="WEBO MINIFY JAVASCRIPT BODY" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_css" type="radio" default="1" label="WEBO MINIFY CSS" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_css_body" type="radio" default="0" label="WEBO MINIFY CSS BODY" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_page" type="radio" default="1" label="WEBO MINIFY PAGE" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_html_comments" type="radio" default="0" label="** WEBO MINIFY HTML COMMENTS" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_html_one_string" type="radio" default="0" label="** WEBO MINIFY HTML ONE STRING" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="minify_css_file" type="text" default="" label="** WEBO MINIFY CSS FILE" description="" size="50" premium="1"/>
+		<param name="minify_javascript_file" type="text" default="" label="** WEBO MINIFY JAVASCRIPT FILE" description="" size="50" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 EXTERNAL"/>
+		<param type="spacer" default="WEBO SPLASH2 EXTERNAL INFO"/>
+		<param name="external_scripts_on" type="radio" default="1" label="WEBO EXTERNAL SCRIPTS ON" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="external_scripts_inline" type="radio" default="1" label="WEBO EXTERNAL SCRIPTS INLINE" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="external_scripts_head_end" type="radio" default="1" label="WEBO EXTERNAL SCRIPTS HEAD END" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="external_scripts_css" type="radio" default="1" label="WEBO EXTERNAL SCRIPTS CSS" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="external_scripts_css_inine" type="radio" default="1" label="WEBO EXTERNAL SCRIPTS CSS INLINE" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="external_scripts_ignore_list" type="text" default="tiny_mce.js tiny_mce_gzip.php fckeditor.js" label="WEBO EXTERNAL SCRIPTS IGNORE LIST" description="" size="50"/>
+		<param name="external_scripts_include_code" type="textarea" default="" rows="5" cols="60" label="** WEBO EXTERNAL SCRIPTS INCLUDE CODE" description="" premium="1"/>
+		<param name="external_scripts_user" type="text" default="" label="** WEBO EXTERNAL SCRIPTS USER" description="" size="50" premium="1"/>
+		<param name="external_scripts_pass" type="text" default="" label="** WEBO EXTERNAL SCRIPTS PASS" description="" size="50" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 GZIP"/>
+		<param type="spacer" default="WEBO SPLASH2 GZIP INFO"/>
+		<param name="gzip_javascript" type="radio" default="1" label="WEBO GZIP JAVASCRIPT" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="gzip_css" type="radio" default="1" label="WEBO GZIP CSS" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="gzip_page" type="radio" default="1" label="WEBO GZIP PAGE" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="gzip_fonts" type="radio" default="1" label="WEBO GZIP FONTS" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="gzip_cookie" type="radio" default="1" label="** WEBO GZIP COOKIE" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="gzip_noie" type="radio" default="1" label="** WEBO GZIP NOIE" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param type="spacer" default="WEBO SPLASH2 EXPIRES"/>
+		<param type="spacer" default="WEBO SPLASH2 EXPIRES INFO"/>
+		<param name="far_future_expires_javascript" type="radio" default="1" label="WEBO FAR FUTURE EXPIRES JAVASCRIPT" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="far_future_expires_css" type="radio" default="1" label="WEBO FAR FUTURE EXPIRES CSS" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="far_future_expires_fonts" type="radio" default="1" label="WEBO FAR FUTURE EXPIRES FONTS" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="far_future_expires_images" type="radio" default="1" label="WEBO FAR FUTURE EXPIRES IMAGES" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="far_future_expires_video" type="radio" default="1" label="WEBO FAR FUTURE EXPIRES VIDEO" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="far_future_expires_static" type="radio" default="1" label="WEBO FAR FUTURE EXPIRES STATIC" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="far_future_expires_html" type="radio" default="0" label="** WEBO FAR FUTURE EXPIRES HTML" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="far_future_expires_html_timeout" type="text" default="60" label="** WEBO FAR FUTURE EXPIRES HTML TIMEOUT" description="" size="4" premium="1"/>
+		<param name="far_future_expires_external" type="radio" default="0" label="** WEBO FAR FUTURE EXPIRES EXTERNAL" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param type="spacer" default="WEBO SPLASH2 HTACCESS"/>
+		<param type="spacer" default="WEBO SPLASH2 HTACCESS INFO"/>
+		<param name="htaccess_enabled" type="radio" default="1" label="WEBO HTACCESS ENABLED" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_mod_deflate" type="radio" default="1" label="WEBO HTACCESS MOD DEFLATE" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_mod_gzip" type="radio" default="1" label="WEBO HTACCESS MOD GZIP" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_mod_expires" type="radio" default="1" label="WEBO HTACCESS MOD EXPIRES" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_mod_headers" type="radio" default="1" label="WEBO HTACCESS MOD HEADERS" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_mod_setenvif" type="radio" default="1" label="WEBO HTACCESS MOD SETENVIF" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_mod_rewrite" type="radio" default="1" label="WEBO HTACCESS MOD REWRITE" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_mod_mime" type="radio" default="1" label="WEBO HTACCESS MOD MIME" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="htaccess_local" type="radio" default="0" label="WEBO HTACCESS LOCAL" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param type="spacer" default="WEBO SPLASH2 FOOTER"/>
+		<param type="spacer" default="WEBO SPLASH2 FOOTER INFO"/>
+		<param name="footer_text" type="radio" default="1" label="* WEBO FOOTER TEXT" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="footer_image" type="text" default="web.optimizer.stamp.png" label="WEBO FOOTER IMAGE" description="" size="50"/>
+		<param name="footer_link" type="text" default="Accelerated with Web Optimizer" label="WEBO FOOTER LINK" description="" size="50"/>
+		<param name="footer_css_code" type="text" default="float:right;margin:-104px 4px -100px" label="WEBO FOOTER CSS CODE" description="" size="50"/>
+		<param name="footer_spot" type="radio" default="1" label="WEBO FOOTER SPOT" description=""><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+	</params>
+	<params group="advanced">
+		<param type="spacer" default="WEBO SPLASH2 MTIME" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 MTIME INFO" premium="1"/>
+		<param name="performance_mtime" type="radio" default="1" label="* WEBO PERFORMANCE MTIME" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="performance_plain_string" type="radio" default="1" label="** WEBO PERFORMANCE PLAIN STRING" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="performance_quick_check" type="radio" default="0" label="** WEBO PERFORMANCE QUICK CHECK" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="performance_cache_version" type="text" default="0" label="** WEBO PERFORMANCE CACHE VERSION" description="" size="4" premium="1"/>
+		<param name="performance_uniform_cache" type="radio" default="0" label="** WEBO PERFORMANCE UNIFORM CACHE" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param type="spacer" default="WEBO SPLASH2 DATAURI" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 DATAURI INFO" premium="1"/>
+		<param name="data_uris_on" type="radio" default="1" label="* WEBO DATA URIS ON" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="data_uris_size" type="text" default="24576" label="* WEBO DATA URIS SIZE" description="" size="5" premium="1"/>
+		<param name="data_uris_ignore_list" type="text" default="" label="* WEBO DATA URIS IGNORE LIST" description="" size="50" premium="1"/>
+		<param name="data_uris_mhtml" type="radio" default="1" label="* WEBO DATA URIS MHTML" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="data_uris_mhtml_size" type="text" default="24576" label="* WEBO DATA URIS MHTML SIZE" description="" size="5" premium="1"/>
+		<param name="data_uris_additional_list" type="text" default="" label="* WEBO DATA URIS ADDITIONAL LIST" description="" size="50" premium="1"/>
+		<param name="data_uris_separate" type="radio" default="1" label="** WEBO DATA URIS SEPARATE" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="data_uris_domloaded" type="radio" default="0" label="** WEBO DATA URIS DOMLOADED" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="data_uris_smushit" type="radio" default="0" label="** WEBO DATA URIS SMUSHIT" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+	</params>
+	<params group="legacy">
+		<param type="spacer" default="WEBO SPLASH2 UNOBTRUSIVE" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 UNOBTRUSIVE INFO" premium="1"/>
+		<param name="unobtrusive_on" type="radio" default="0" label="** WEBO UNOBTRUSIVE ON" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="unobtrusive_body" type="radio" default="0" label="** WEBO UNOBTRUSIVE BODY" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="unobtrusive_all" type="radio" default="0" label="** WEBO UNOBTRUSIVE ALL" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="unobtrusive_informers" type="radio" default="0" label="** WEBO UNOBTRUSIVE INFORMERS" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="unobtrusive_counters" type="radio" default="0" label="** WEBO UNOBTRUSIVE COUNTERS" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="unobtrusive_ads" type="radio" default="0" label="** WEBO UNOBTRUSIVE ADS" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="unobtrusive_iframes" type="radio" default="0" label="** WEBO UNOBTRUSIVE IFRAMES" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param type="spacer" default="WEBO SPLASH2 HTMLCACHE" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 HTMLCACHE INFO" premium="1"/>
+		<param name="html_cache_enabled" type="radio" default="0" label="** WEBO HTML CACHE ENABLED" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="html_cache_timeout" type="text" default="600" label="** WEBO HTML CACHE TIMEOUT" description="" size="4" premium="1"/>
+		<param name="html_cache_flush_only" type="radio" default="1" label="** WEBO HTML CACHE FLUSH ONLY" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="html_cache_flush_size" type="text" default="1024" label="** WEBO HTML CACHE FLUSH SIZE" description="" size="4" premium="1"/>
+		<param name="html_cache_ignore_list" type="text" default="" label="** WEBO HTML CACHE IGNORE LIST" description="" size="50" premium="1"/>
+		<param name="html_cache_allowed_list" type="text" default="office data msfrontpage yahoo googlebot yandex yadirect dyatel msnbot twiceler" label="** WEBO HTML CACHE ALLOWED LIST" description="" size="50" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 SPRITES" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 SPRITES INFO" premium="1"/>
+		<param name="css_sprites_enabled" type="radio" default="1" label="** WEBO CSS SPRITES ENABLED" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="css_sprites_truecolor_in_jpeg" type="radio" default="0" label="** WEBO CSS SPRITES TRUECOLOR IN JPEG" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="css_sprites_aggressive" type="radio" default="0" label="** WEBO CSS SPRITES AGGRESSIVE" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="css_sprites_extra_space" type="radio" default="1" label="** WEBO CSS SPRITES EXTRA SPACE" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="css_sprites_no_ie6" type="radio" default="1" label="** WEBO CSS SPRITES NO IE6" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="css_sprites_memory_limited" type="radio" default="1" label="** WEBO CSS SPRITES MEMORY LIMITED" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="css_sprites_dimensions_limited" type="text" default="900" label="** WEBO CSS SPRITES DIMENSIONS LIMITED" description="" size="4" premium="1"/>
+		<param name="css_sprites_ignore_list" type="text" default="corners.gif" label="** WEBO CSS SPRITES IGNORE LIST" description="" size="50" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 PARALLEL" premium="1"/>
+		<param type="spacer" default="WEBO SPLASH2 PARALLEL INFO" premium="1"/>
+		<param name="parallel_enabled" type="radio" default="1" label="** WEBO PARALLEL ENABLED" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="parallel_check" type="radio" default="1" label="** WEBO PARALLEL CHECK" description="" premium="1"><option value="0">WEBO SYSTEM CHECK DISABLED</option><option value="1">WEBO SYSTEM CHECK ENABLED</option></param>
+		<param name="parallel_allowed_list" type="text" default="" label="** WEBO PARALLEL ALLOWED LIST" description="" size="50" premium="1"/>
+		<param name="parallel_additional" type="text" default="" label="** WEBO PARALLEL ADDITIONAL" description="" size="50" premium="1"/>
+		<param name="parallel_additional_list" type="text" default="" label="** WEBO PARALLEL ADDITIONAL LIST" description="" size="50" premium="1"/>
+	</params>
+</install>
